@@ -24,7 +24,7 @@ export const Footer = () => {
       setLoading(false);
       return SweetAlert(validationResult.error.message);
     }
-    const response = await Axios.post('http://127.0.0.1:8081/api/email/send', state);
+    const response = await Axios.post('https://danieladek-portfolio.herokuapp.com/api/email/send', state);
     setLoading(false);
     return SweetAlert(response.data.message, response.data.status, 'success');
   }
