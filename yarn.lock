@@ -398,11 +398,6 @@ jmespath@0.15.0:
   resolved "https://registry.yarnpkg.com/jmespath/-/jmespath-0.15.0.tgz#a3f222a9aae9f966f5d27c796510e28091764217"
   integrity sha1-o/Iiqarp+Wb10nx5ZRDigJF2Qhc=
 
-jsend@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/jsend/-/jsend-1.1.0.tgz#355d7bede605e46028e1f2eba83026a462297b4a"
-  integrity sha512-PrlHjO07zBe03p5i93fyiy2w4cTMVhN5oKyRn5vbDz+ImndSQJZiB4MeGOBoZ2zc9s1BsO7knw3N6jCVkM+VCw==
-
 json-parse-better-errors@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"

@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const jsend = require('jsend');
 const { config } = require('dotenv');
 const Routes = require('./emailSender');
 
@@ -29,9 +28,6 @@ const urlencoded = bodyParser.urlencoded({
 });
 app.use(urlencoded);
 app.use(json);
-
-// JSEND MIDDLEWARE
-app.use(jsend.middleware);
 
 // ROUTES GOES HERE
 app.use('/api', Routes);
