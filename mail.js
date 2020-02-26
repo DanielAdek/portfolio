@@ -15,7 +15,7 @@ const transport = nodemailer.createTransport(
 exports.Sender = async (options) => {
   const mailOptions = {
     from: `${options.name} <maildaniel.me1@gmail.com>`,
-    to: 'maildaniel.me1@gmail.com',
+    to: 'daniel.adek.k@gmail.com',
     subject: `${options.name || options.from}: Job Invitation`,
     html: ``,
     text: `${options.message}. From: ${options.from}`

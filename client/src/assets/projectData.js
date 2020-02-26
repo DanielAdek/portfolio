@@ -7,10 +7,10 @@ export const ProData = [
     animate: 'bounce'
   },
   {
-    imageSrc: require('../assets/images/FP.png'),
+    imageSrc: require('../assets/images/aboutFP.png'),
     title: 'Finance Palace',
     text: 'A Micro finance organization that allows users loan lucre as much as posible',
-    href: 'https://google.com',
+    href: 'https://financepalace.surge.sh/',
     animate: 'roll'
   },
   {
@@ -19,6 +19,13 @@ export const ProData = [
     text: 'NPM package for users to validate input fields.',
     href: 'https://www.npmjs.com/package/form-my-simple-validation',
     animate: 'zoom'
+  },
+  {
+    imageSrc: require('../assets/images/portfolio.png'),
+    title: 'Portfolio',
+    text: 'My Portfolio showing some of my projects.',
+    href: 'https://danieladek-portfolio.herokuapp.com/',
+    animate: 'bounce'
   },
   {
     imageSrc: require('../assets/images/RMW.png'),
@@ -34,7 +41,7 @@ export const ChartOptions = {
   //exportEnabled: true,
   theme: "light2", //"light1", "dark1", "dark2"
   title: {
-    text: "Tech skills chart"
+    text: "Main Tech skills chart"
   },
   data: [
     {
@@ -44,7 +51,7 @@ export const ChartOptions = {
         { label: "JavaScript", y: 90 },
         { label: "ReactJS", y: 86 },
         { label: "NodeJS", y: 87 },
-        { label: "TypeScript", y: 75 }
+        { label: "TypeScript", y: 89 }
       ]
     }
   ]
