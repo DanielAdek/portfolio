@@ -63,7 +63,7 @@ export const About = ({ id }) => {
                 He is interested in showcasing his skills and ready for any challenge.
                 <br /> <br />
                 Reach out to <AM.Links href="#sec_5">
-                  <em>maildaniel.me1@gmail.com</em>
+                  <em>daniel.adek.k@gmail.com</em>
                 </AM.Links> to connect.
               </AM.Text>
             </Animate>

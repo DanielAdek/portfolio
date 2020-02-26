@@ -8,8 +8,9 @@ import { Animate } from './animate';
 import { schema } from '../assets/projectData';
 
 export const Footer = () => {
+  const initialState = { email: '', message: '', name: ''};
   //React Hooks
-  const [state, setState] = useState({ email: '', message: '', name: ''});
+  const [state, setState] = useState(initialState);
   const [loading, setLoading] = useState(false);
 
   const handleChange = event => setState({ ...state, [event.target.name]: event.target.value });
@@ -18,15 +19,20 @@ export const Footer = () => {
     if (!window.navigator.onLine) {
       return SweetAlert('Network Connection Error');
     }
-    setLoading(true);
-    const validationResult = Form.validateFields('contact', schema, state);
-    if (validationResult.error) {
+    try {
+      setLoading(true);
+      const validationResult = Form.validateFields('contact', schema, state);
+      if (validationResult.error) {
+        setLoading(false);
+        return SweetAlert(validationResult.error.message);
+      }
+      const response = await Axios.post('https://danieladek-portfolio.herokuapp.com/api/email/send', state);
       setLoading(false);
-      return SweetAlert(validationResult.error.message);
+      setState(initialState);
+      return SweetAlert(response.data.message, response.data.status, 'success');
+    } catch(err) {
+      setLoading(false)
     }
-    const response = await Axios.post('https://danieladek-portfolio.herokuapp.com/api/email/send', state);
-    setLoading(false);
-    return SweetAlert(response.data.message, response.data.status, 'success');
   }
   return (
     <RC.Wrapper>
@@ -38,9 +44,9 @@ export const Footer = () => {
           </Animate>
           <Animate type="zoom">
             <RC.Form>
-              <RC.Input name="name" onChange={handleChange} type="text" placeholder="Please Enter Name" />
-              <RC.Input name="email" onChange={handleChange} type="email" placeholder="Please Enter Email" />
-              <RC.TextArea name="message" onChange={handleChange} placeholder="Message" rows="5"></RC.TextArea>
+              <RC.Input value={state.name} name="name" onChange={handleChange} type="text" placeholder="Please Enter Name" />
+              <RC.Input value={state.email} name="email" onChange={handleChange} type="email" placeholder="Please Enter Email" />
+              <RC.TextArea value={state.message} name="message" onChange={handleChange} placeholder="Message" rows="5"></RC.TextArea>
               <RC.Button
                 onClick={handleSendEmail} 
                 type="button"

@@ -7,12 +7,7 @@ export const NavigationPanel = () => {
     <Nav.PanelContainer>
       <Nav.PanelLinksCover>
       <Scrollspy
-          // scrollTargetIds={["sec_1", "sec_2", "sec_3", "sec_4", "sec_5"]}
-          // offset={100}
-          // activeNavClass="is-active"
           items={ ['sec_1', 'sect_2', 'sec_3', "sec_4", "sec_5"] }
-          // scrollDuration="50"
-          // headerBackground="true"
         >
         <Nav.PanelLinkUl>
           <Nav.PanelLinKLi>
@@ -29,6 +24,13 @@ export const NavigationPanel = () => {
           </Nav.PanelLinKLi>
           <Nav.PanelLinKLi>
             <Nav.PanelLink href="#sec_5">Contact</Nav.PanelLink>
+          </Nav.PanelLinKLi>
+          <Nav.PanelLinKLi>
+            <Nav.PanelLink
+              href="https://drive.google.com/open?id=1RxKumUKhz7tiGf20Nj7WYHbbVJMLUcoO"
+              target="_blank"
+              >CV
+            </Nav.PanelLink>
           </Nav.PanelLinKLi>
         </Nav.PanelLinkUl>
         </Scrollspy>
